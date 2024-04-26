@@ -2,17 +2,17 @@ import React from 'react'
 import {IMAGES} from '../../constants';
 import { Link } from 'react-router-dom';
 import { FaGift } from "react-icons/fa";
-import { RiComputerLine } from 'react-icons/ri'
+// import { RiComputerLine } from 'react-icons/ri'
 
 const SIDEBAR_BUTTONS = [
+  // {
+  //   title: "Administrators",
+  //   link: "/app",
+  //   icon: <RiComputerLine size={20} />,
+  // },
   {
-    title: "Administrators",
+    title: "Car Listings",
     link: "/app",
-    icon: <RiComputerLine size={20} />,
-  },
-  {
-    title: "Product",
-    link: "/app/product",
     icon: <FaGift size={20} />,
   },
 ]

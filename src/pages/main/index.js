@@ -1,9 +1,7 @@
 import AppStarter from "./AppStarter";
-import Product from "./Product";
-import UserList from "./UserList";
+import CarListing from "./CarListing";
 
 export {
     AppStarter,
-    Product,
-    UserList,
+    CarListing,
 }

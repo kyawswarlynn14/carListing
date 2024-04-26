@@ -40,7 +40,8 @@ const initialValues = {
     location: "",
 };
 
-const CreateProduct = ({ isUpdate = false, itemToUpdate = null, refetchFunc }) => {
+const CreateCarListing = ({ isUpdate = false, itemToUpdate = null, refetchFunc }) => {
+  const limit = 10;
   const [values, setValues] = useState(initialValues);
   const [open, setOpen] = useState(false);
   const userFromCookies = Cookies.get('user');
@@ -513,4 +514,4 @@ const CreateProduct = ({ isUpdate = false, itemToUpdate = null, refetchFunc }) =
   );
 };
 
-export default CreateProduct;
+export default CreateCarListing;

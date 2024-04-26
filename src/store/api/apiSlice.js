@@ -4,6 +4,7 @@ import Cookies from 'js-cookie';
 export const apiSlice = createApi({
     reducerPath: 'api',
     baseQuery: fetchBaseQuery({
+        // baseUrl: "/api",
         baseUrl: "https://auto-trader-api.onrender.com/api",
         prepareHeaders: (headers) => {
             const token = Cookies.get('token');

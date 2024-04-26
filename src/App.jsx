@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import { NotAuthorized, PageNotFound } from './pages/layout';
-import { AppStarter, Product, UserList } from './pages/main';
+import { AppStarter, CarListing } from './pages/main';
 import { AuthIndex, AuthStarter, Login, Register, VerifyOtp } from './pages/auth';
 import { IndexPage } from './pages';
 
@@ -17,8 +17,7 @@ const App = () => {
         </Route>
 
         <Route path="/app" element={<AppStarter />} >
-          <Route path="" element={<UserList />} />
-          <Route path="product" element={<Product />} />
+          <Route path="" element={<CarListing />} />
         </Route>
 
         <Route path="/not-authorized" element={<NotAuthorized />} />

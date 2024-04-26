@@ -5,7 +5,7 @@ import DialogActions from '@mui/material/DialogActions';
 import Button from '@mui/material/Button';
 import { useEffect, useState } from 'react';
 
-const ProductDetails = ({ open, onClose, rowData }) => {
+const CarListingDetails = ({ open, onClose, rowData }) => {
     const photos = rowData?.photos ?? [];
     const [selectedPhoto, setSelectedPhoto] = useState(null);
     const [showFullImg, setShowFullImg] = useState(false);
@@ -154,4 +154,4 @@ const ProductDetails = ({ open, onClose, rowData }) => {
   );
 };
 
-export default ProductDetails;
+export default CarListingDetails;

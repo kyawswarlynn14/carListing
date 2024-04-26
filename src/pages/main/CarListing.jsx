@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { CreateProduct, ProductDetails } from '../../components/products'
+import { CreateCarListing, CarListingDetails } from '../../components/carListings'
 import { useScreenWidth } from '../../hooks';
 import { DataGrid, GridToolbarContainer } from '@mui/x-data-grid';
 import { Box, Pagination } from '@mui/material';
@@ -10,7 +10,7 @@ import { useDispatch } from 'react-redux';
 import { userLoggedOut } from '../../store/auth/authSlice';
 import { useNavigate } from 'react-router-dom';
 
-const Product = () => {
+const CarListing = () => {
   const limit = 10;
   const screenWidth = useScreenWidth();
   const dispatch = useDispatch();
@@ -89,7 +89,7 @@ const Product = () => {
       flex: 0.2,
       renderCell: (params) => {
         return (
-          <CreateProduct 
+          <CreateCarListing 
             refetchFunc={getAllCarListing}
             isUpdate={true} 
             itemToUpdate={productList.find(i => i._id === params?.row.id)}
@@ -167,7 +167,7 @@ const Product = () => {
           <span className='py-1 px-3 text-sm text-gray-500 border border-gray-400 rounded-full'>{productList?.length ?? '0'}</span>
         </div>
         
-        <CreateProduct refetchFunc={getAllCarListing} isUpdate={false} />
+        <CreateCarListing refetchFunc={getAllCarListing} isUpdate={false} />
       </div>
 
       <div className='mt-4 pb-4'>
@@ -253,7 +253,7 @@ const Product = () => {
             disableDensitySelector
           />
 
-          <ProductDetails 
+          <CarListingDetails 
             open={detailDialogOpen}
             onClose={handleDetailDialogClose}
             rowData={productList?.length ? productList.find(i => i?._id === selectedRowId) : null}
@@ -264,4 +264,4 @@ const Product = () => {
   )
 }
 
-export default Product
+export default CarListing
